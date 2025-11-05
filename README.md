@@ -33,3 +33,61 @@ Lumi combines **AI-driven intent recognition** with **on-chain interaction**.
 It translates user messages into blockchain queries and commands, returning human-readable responses.
 
 ### ⚙️ High-Level Flow
+
+User Message → AI Intent Engine → Action Handler → BlockDAG Network → Human Response
+
+### 🔐 Core Components
+
+| Layer                    | Description                                                                                 |
+| ------------------------ | ------------------------------------------------------------------------------------------- |
+| **Frontend (UI)**        | Chat interface built with React + WalletConnect.                                            |
+| **Backend (Express.js)** | AI intent processing, API routing, and secure wallet logic.                                 |
+| **AI Engine**            | OpenAI API (free trial) or LocalAI/HuggingFace fallback for natural language understanding. |
+| **Blockchain Layer**     | BlockDAG network for wallet data, transactions, and smart contracts.                        |
+| **Database**             | MongoDB for user profiles, preferences, and alerts.                                         |
+
+---
+
+## 🧱 Project Architecture
+
+```plaintext
+                 ┌────────────────────────┐
+                 │     Frontend (UI)      │
+                 │  • Chat Interface      │
+                 │  • Wallet Connect SDK  │
+                 └────────────┬───────────┘
+                              │
+                              ▼
+┌─────────────────────────────┴─────────────────────────────┐
+│                  Backend (Express.js API)                 │
+│  • Receives user messages                                 │
+│  • Sends to AI Intent Engine (OpenAI / Local Model)       │
+│  • Maps intent → blockchain actions                       │
+│  • Calls BlockDAG RPC / GraphQL APIs                      │
+│  • Returns formatted response to UI                       │
+└─────────────────────────────┬─────────────────────────────┘
+                              │
+                              ▼
+               ┌─────────────────────────────┐
+               │     BlockDAG Network        │
+               │  • Wallet data & balances   │
+               │  • Transactions & alerts    │
+               │  • Smart contracts (DeFi)   │
+               └─────────────────────────────┘
+                              │
+                              ▼
+               ┌─────────────────────────────┐
+               │   Smart-Contract Layer       │
+               │  • Portfolio alerts          │
+               │  • Auto-actions (optional)   │
+               └─────────────────────────────┘
+```
+
+| Layer      | Technology                                         |
+| ---------- | -------------------------------------------------- |
+| Frontend   | React / Next.js / TailwindCSS                      |
+| Backend    | Express.js + Node.js                               |
+| AI Engine  | OpenAI API (GPT-4o-mini) or LocalAI                |
+| Blockchain | BlockDAG Network                                   |
+| Database   | MongoDB                                            |
+| Tools      | WalletConnect · Ethers.js · Framer Motion (for UI) |
