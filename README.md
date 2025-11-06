@@ -27,6 +27,24 @@ Powered by **BlockDAG’s scalable, high-speed architecture**, Lumi delivers **i
 
 ---
 
+### 🌍 Market Opportunity
+
+Over 100 million global crypto users and rising.
+
+DeFi Total Value Locked (TVL) exceeds $100 billion, yet less than 10% of users actively engage due to complexity.
+
+AI assistants (like ChatGPT) are now mainstream — integrating this behavior into Web3 creates a massive adoption bridge.
+
+Lumi positions itself at the intersection of AI + DeFi + UX, targeting:
+
+New crypto users seeking simplicity
+
+Power DeFi traders who need fast, real-time data
+
+Developers looking for conversational interfaces in their dApps
+
+By leveraging BlockDAG’s speed, scalability, and developer-friendly APIs, Lumi can deliver instant, low-latency DeFi intelligence — making it the go-to Web3 conversational companion.
+
 ## 🧠 How Lumi Works
 
 Lumi combines **AI-driven intent recognition** with **on-chain interaction**.  
@@ -85,7 +103,7 @@ User Message → AI Intent Engine → Action Handler → BlockDAG Network → Hu
 
 | Layer      | Technology                                         |
 | ---------- | -------------------------------------------------- |
-| Frontend   | React / Next.js / TailwindCSS                      |
+| Frontend   | React / TailwindCSS                                |
 | Backend    | Express.js + Node.js                               |
 | AI Engine  | OpenAI API (GPT-4o-mini) or LocalAI                |
 | Blockchain | BlockDAG Network                                   |
