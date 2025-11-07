@@ -52,7 +52,7 @@ User → Chat UI → AI Engine → BlockDAG → Smart Contracts
 
 ## 🧩 Component Diagram
 
-![Lumi Architecture](../assets/architecture.png)
+![Lumi Architecture](../assets/architecture-lumi.png)
 
 ---
 
