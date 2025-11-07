@@ -109,3 +109,7 @@ User Message → AI Intent Engine → Action Handler → BlockDAG Network → Hu
 | Blockchain | BlockDAG Network                                   |
 | Database   | MongoDB                                            |
 | Tools      | WalletConnect · Ethers.js · Framer Motion (for UI) |
+
+## 🧩 Component Diagram
+
+![Lumi Architecture](../assets/architecture-lumi.png)
