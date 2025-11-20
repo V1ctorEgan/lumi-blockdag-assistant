@@ -12,7 +12,7 @@ export default function Landingpage() {
         <Animationstack/>
         <HowItWorks/>
         <Features/>
-        <Dashboard/>
+        {/* <Dashboard/> */}
       
     </div>
   )

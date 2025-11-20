@@ -14,11 +14,11 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-linear-to-br from-cyan-400 to-indigo-600 flex items-center justify-center font-bold text-black">IS</div>
               <div>
-                <div className="text-lg font-semibold">IntentSwap</div>
+                <div className="text-lg font-semibold">Lumi</div>
                 <div className="text-slate-400 text-sm">BlockDAG-powered swaps</div>
               </div>
             </div>
-            <p className="text-slate-400 mt-4 text-sm">© 2025 IntentSwap • Built by your team</p>
+            <p className="text-slate-400 mt-4 text-sm">© 2025 Lumi • Built by your team</p>
           </div>
 
           <div>
@@ -26,7 +26,7 @@ export default function Footer() {
               <div>
                 <h5 className="font-semibold">Product</h5>
                 <ul className="text-slate-400 text-sm mt-3 space-y-2">
-                  <li>Swap</li>
+                  <li>Lumi</li>
                   <li>History</li>
                   <li>Dashboard</li>
                 </ul>
@@ -52,7 +52,6 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 text-slate-400 text-sm">Made with ❤️ for hackathons. Demo UI only — replace web3 stubs for real swap.</div>
       </div>
     </footer>
       
