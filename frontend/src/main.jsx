@@ -1,10 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import {Router} from './routes/Router.jsx'
+import {RouterProvider } from 'react-router-dom'
 
-createRoot(document.getElementById('root')).render(
+const rootEl = document.getElementById('root');
+// add class to hide scrollbars visually while keeping scrolling enabled
+if (rootEl && !rootEl.classList.contains('no-scrollbar')) {
+  rootEl.classList.add('no-scrollbar');
+}
+
+createRoot(rootEl).render(
   <StrictMode>
-    <App />
+      <RouterProvider router={Router} />
   </StrictMode>,
 )
