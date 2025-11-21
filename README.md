@@ -81,7 +81,7 @@ User Message → AI Intent Engine → Action Handler → BlockDAG Network → Hu
 │  • Receives user messages                                 │
 │  • Sends to AI Intent Engine (OpenAI / Local Model)       │
 │  • Maps intent → blockchain actions                       │
-│  • Calls BlockDAG RPC / GraphQL APIs                      │
+│  • Calls BlockDAG RPC /                    │
 │  • Returns formatted response to UI                       │
 └─────────────────────────────┬─────────────────────────────┘
                               │
@@ -110,6 +110,98 @@ User Message → AI Intent Engine → Action Handler → BlockDAG Network → Hu
 | Database   | MongoDB                                            |
 | Tools      | WalletConnect · Ethers.js · Framer Motion (for UI) |
 
-## 🧩 Component Diagram
+---
 
-![Lumi Architecture](../assets/architecture-lumi.png)
+## 🛠️ Local Setup & Installation 🧑‍💻
+
+Follow these steps to get a local copy of **Lumi** running. This project requires configuring both the backend API and the React frontend.
+
+### Prerequisites
+
+- **Node.js** (v18+)
+- **npm** or **yarn**
+- **MongoDB** instance (local or remote cluster URI)
+- **OpenAI API Key** (or setup for LocalAI/HuggingFace fallback)
+- **Foundry**
+
+---
+
+### ⚙️ Step 1: Backend Setup (Express.js)
+
+The backend handles the core AI intent logic, API routing, and the connection to the BlockDAG network.
+
+1.  **Navigate to the backend directory:**
+
+    ```bash
+    cd backend
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or yarn install
+    ```
+
+3.  **Configure environment variables:**
+    Create a file named **`.env`** inside the `backend` folder and populate it with your configuration:
+
+    ```
+    # Backend Configuration
+    PORT=3000
+    MONGODB_URI="your_mongodb_connection_string"
+
+    # AI Engine Configuration
+    OPENAI_API_KEY="your_openai_key"
+
+    # BlockDAG Connection
+    BLOCKDAG_RPC_URL="[Official BlockDAG RPC Endpoint]"
+    ```
+
+4.  **Start the Backend Server:**
+    ```bash
+    npm start
+    # or for development with hot reload:
+    # npm run dev
+    ```
+
+---
+
+### 🎨 Step 2: Frontend Setup (React/UI)
+
+The frontend provides the conversational chat interface and handles WalletConnect integration.
+
+1.  **Navigate to the frontend directory:**
+
+    ```bash
+    cd ../frontend
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or yarn install
+    ```
+
+3.  **Start the Frontend Client:**
+    ```bash
+    npm start
+    ```
+    The application should now be accessible in your browser (typically at `http://localhost:3001` or similar).
+
+---
+
+## 🔭 Future Plans & Roadmap (Lumi V2) 🔮
+
+Lumi has massive potential to evolve into a full-fledged financial control center for Web3.
+
+- **Portfolio Tracking & DeFi Integration:**
+  - Integrate **DEX/DEX Aggregator APIs** (on BlockDAG) to enable conversational swaps (e.g., "Swap 10 BDAG for stablecoin").
+  - Advanced portfolio analysis (e.g., "Show my yield farm returns over the last month").
+- **Security & Alerts:**
+  - **On-chain Alerts:** Fully implement the smart-contract layer in the `smart-contracts` folder for persistent, event-driven alerts (e.g., "Alert me when my portfolio drops by 5%").
+  - **Transaction Simulation:** Add pre-send simulation to warn users about potential scam approvals or high slippage before signing a transaction.
+- **Community & Adoption:**
+  - Develop a **Chrome Extension** for ambient access.
+  - Support for multiple BlockDAG-compatible wallets and dApps.
