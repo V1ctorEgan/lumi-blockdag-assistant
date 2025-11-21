@@ -5,14 +5,18 @@ import Dashboard from '../pages/Dashboard'
 import { HowItWorks } from '../components/Landingcomponent/HowitWorks'
 import Features from '../components/Landingcomponent/Features'
 import ScrollingText from '../components/Landingcomponent/ScrollingText'
+import Contact from '../components/Landingcomponent/Contact'
+import Summary from '../components/Landingcomponent/summary'
 export default function Landingpage() {
   return (
     <div className=''>
         <App/>
-        <ScrollingText text={'LUMI is powered by the blockdag that is backed by commercial fixed  why is the time of the time of the focus of the time of the security '}/>
+        <ScrollingText text={'LUMI-CHat is backed by blockchain technology , ensuring secure and transparent interactions. powered by AI , LUMI-Chat provides real-time insights and personalized recommendations for your blockchain journey '}/>
         <Animationstack/>
         <HowItWorks/>
-        <Features/>
+        <Summary/>
+        <Contact/>
+        {/* <Features/> */}
         {/* <Dashboard/> */}
       
     </div>

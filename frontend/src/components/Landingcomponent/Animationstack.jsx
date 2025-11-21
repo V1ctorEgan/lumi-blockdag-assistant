@@ -39,6 +39,7 @@ export default function AnimationStack() {
       <div className="container mx-auto space-y-5">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
          LUMI Chat-Based  Actions
+          <span id="actions" ></span>
         </h2>
 
         {features.map((feature, index) => (
