@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.19;
 
-import "forge-std/Test.sol";
-import "../src/LumiAlerts.sol";
+import {Test} from "forge-std/Test.sol";
+import {LumiAlerts} from "../src/LumiAlerts.sol";
 
 contract LumiAlertsTest is Test {
     LumiAlerts public lumiAlerts;
