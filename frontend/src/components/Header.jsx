@@ -7,42 +7,45 @@ import SiriLogo from '../SiriLogo.json'
 import Lottie from 'lottie-react'
 
 // import Logo from '../assets/Logo.svg'; // add your logo here
-import { LayoutDashboard, ArrowRightLeft, History, Settings, Wallet } from 'lucide-react';
+import { LayoutDashboard,ArrowRightCircle, ContactIcon,NotebookIcon, History, Settings, Wallet ,WorkflowIcon } from 'lucide-react';
 
 const navItems = [
-  { path: '/swap', name: 'Swap', icon: ArrowRightLeft },
-  { path: '/dashboard', name: 'Dashboard', icon: LayoutDashboard },
-  { path: '/history', name: 'History', icon: History },
+  { path: '#howitworks', name: 'How IT Works', icon: WorkflowIcon },
+  { path: '#contact', name: 'Contact', icon: ContactIcon },
+  { path: '#actions', name: 'Actions', icon: NotebookIcon },
 ];
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 lg:px-10 px-3">
+    <header className="sticky top-0 z-50 lg:px-10 px-1">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-18">
-          <Link to="/" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-2">
             <Lottie animationData={SiriLogo} className='w-7'/>
             {/* <motion.img src={Logo} alt="IntentSwap" className="h-9 w-9" whileHover={{ rotate: 8 }} /> */}
             {/* <p className='text-white'>lumi</p> */}
-            <span className="hidden md:inline text-white text-lg font-semibold">LUMI</span>
+            <span className=" text-white text-lg font-semibold">LUMI-chat</span>
           </Link>
-{/* 
+
           <nav className="hidden md:flex items-center gap-3 bg-white/3 backdrop-blur-md px-2 py-1 rounded-full border border-white/6">
             {navItems.map((item) => (
-              <NavLink
+              <div className='text-slate-400'>
+              <a
                 key={item.path}
-                to={item.path}
-                className={({ isActive }) =>
-                  `px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-all ${
-                    isActive ? 'bg-linear-to-r from-cyan-500 to-indigo-600 text-black shadow-[0_8px_40px_rgba(6,182,212,0.18)]' : 'text-slate-300 hover:text-white hover:bg-white/6'
+                href={item.path}
+                className={
+                  `px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2 transition-all 
+                      text-slate-300 hover:text-white hover:bg-white/6'
                   }`
                 }
               >
                 <item.icon size={16} />
                 {item.name}
-              </NavLink>
+              </a>
+
+              </div>
             ))}
-          </nav> */}
+          </nav>
 
           <div className="flex items-center gap-4">
             <Link to="/settings" className="text-slate-300 hover:text-white transition-colors">

@@ -36,15 +36,16 @@ export default function AnimationStack() {
 
   return (
     <section className="relative w-full bg-black text-white py-24">
-      <div className="container mx-auto space-y-24">
-        <h2 className="text-2xl md:text-5xl font-bold text-center mb-12">
-          ✨ Chat-Based Crypto Actions
+      <div className="container mx-auto space-y-5">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
+         LUMI Chat-Based  Actions
+          <span id="actions" ></span>
         </h2>
 
         {features.map((feature, index) => (
           <div
             key={index}
-            className="sticky top-32 flex flex-col md:flex-row items-center justify-between gap-12 bg-gray-900 p-8 rounded-3xl shadow-lg"
+            className="sticky lg:mx-10 mx-3 top-32 flex flex-col md:flex-row items-center justify-between gap-12 bg-gray-900 p-8 rounded-3xl shadow-lg"
           >
         
             <div className="flex-1">

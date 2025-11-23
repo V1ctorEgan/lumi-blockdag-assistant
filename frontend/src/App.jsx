@@ -19,7 +19,8 @@ function App() {
   return (
     <div className=''>
 
-<div style={{ width: '100%', height: '600px', position: 'absolute' }}>
+<div className='w-full lg:h-[600px] h-[300px] absolute'>
+{/* <div style={{ width: '100%', height: '600px', position: 'absolute' }}> */}
   <Orb
     hoverIntensity={0.5}
     rotateOnHover={true}

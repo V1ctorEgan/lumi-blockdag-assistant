@@ -21,19 +21,20 @@ const steps = [
 export function HowItWorks() {
   return (
     <section className="py-5 px-4 relative">
+      <span id="howitworks"></span>
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl lg:text-5xl text-white">
+        <div className="text-center mb-16 space-y-2">
+          <h2 className="text-3xl lg:text-4xl text-white">
             How It Works
           </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-xl mx-auto">
             Get started with Lumi in three simple steps
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 relative">
+        <div className="grid md:grid-cols-3 gap-8 relative ">
       
-          <div className="hidden md:block absolute top-16 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-blue-500/50 to-transparent"></div>
+          <div className="hidden md:block absolute top-17 left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-blue-500/50 to-transparent"></div>
           
           {steps.map((step, index) => (
             <div key={index} className="relative">
