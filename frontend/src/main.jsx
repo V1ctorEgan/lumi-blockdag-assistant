@@ -5,7 +5,7 @@ import {Router} from './routes/Router.jsx'
 import {RouterProvider } from 'react-router-dom'
 
 const rootEl = document.getElementById('root');
-// add class to hide scrollbars visually while keeping scrolling enabled
+// add class to higgftde scrollbars visually while keeping scrolling enabled
 if (rootEl && !rootEl.classList.contains('no-scrollbar')) {
   rootEl.classList.add('no-scrollbar');
 }
