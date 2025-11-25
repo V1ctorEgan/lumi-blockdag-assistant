@@ -152,13 +152,38 @@ class IntentEngine {
 // BlockDAG Mock Integration (Replace with actual RPC calls)
 class BlockDAGService {
   static async getBalance(address) {
-    // Mock response - replace with actual BlockDAG RPC call
-    // Example: await fetch(BLOCKDAG_RPC_URL, { method: 'POST', body: ... })
-    return {
-      balance: "15.42",
-      token: "BDAG",
-      usdValue: "308.40",
-    };
+    // Attempt to derive balance from cached transactions in DB.
+    // If no transactions exist for this address, treat as a new account with 0 balance.
+    if (!address) {
+      return { balance: "0", token: "BDAG", usdValue: "0" };
+    }
+
+    try {
+      const addr = address.toLowerCase();
+      const txs = await TransactionCache.find({ $or: [{ from: addr }, { to: addr }] }).lean();
+
+      if (!txs || txs.length === 0) {
+        // No transaction history → new account
+        return { balance: "0", token: "BDAG", usdValue: "0" };
+      }
+
+      // Compute simple balance = sum(incoming) - sum(outgoing)
+      let bal = 0;
+      for (const tx of txs) {
+        const v = parseFloat(tx.value) || 0;
+        if (tx.to && tx.to.toLowerCase() === addr) bal += v;
+        if (tx.from && tx.from.toLowerCase() === addr) bal -= v;
+      }
+
+      if (bal < 0) bal = 0;
+
+      // Simple USD conversion placeholder (replace with real price source)
+      const usdPerToken = 20; // placeholder
+      return { balance: String(bal), token: "BDAG", usdValue: (bal * usdPerToken).toFixed(2) };
+    } catch (err) {
+      console.error("BlockDAGService.getBalance error:", err);
+      return { balance: "0", token: "BDAG", usdValue: "0" };
+    }
   }
 
   static async getTransactions(address, limit = 10) {
