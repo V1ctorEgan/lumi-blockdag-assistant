@@ -13,7 +13,7 @@ const Rootlayout = () => {
       <div className="fixed inset-0 pointer-events-none">
         <Particles
           particleColors={['#ffffff', '#7f5af0']}
-          particleCount={500}
+          particleCount={100}
           particleSpread={10}
           speed={0.08}
           particleBaseSize={80}
