@@ -6,7 +6,7 @@ import { HowItWorks } from '../components/Landingcomponent/HowitWorks'
 import Features from '../components/Landingcomponent/Features'
 import ScrollingText from '../components/Landingcomponent/ScrollingText'
 import Contact from '../components/Landingcomponent/Contact'
-import Summary from '../components/Landingcomponent/summary'
+import Summary from '../components/Landingcomponent/Summary'
 export default function Landingpage() {
   return (
     <div className=''>
