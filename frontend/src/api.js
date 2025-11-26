@@ -1,7 +1,9 @@
 // src/api.js
 import axios from "axios";
 
-const BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api";
+const BASE =
+  import.meta.env.VITE_API_BASE_URL ||
+  "https://lumi-blockdag-assistant-2.onrender.com/api";
 
 export const postChat = async (message, walletAddress) => {
   const res = await axios.post(`${BASE}/chat`, { message, walletAddress });
@@ -14,7 +16,9 @@ export const getBalance = async (address) => {
 };
 
 export const getTransactions = async (address, limit = 10) => {
-  const res = await axios.get(`${BASE}/wallet/transactions/${address}?limit=${limit}`);
+  const res = await axios.get(
+    `${BASE}/wallet/transactions/${address}?limit=${limit}`
+  );
   return res.data;
 };
 
@@ -30,6 +34,10 @@ export const getAlerts = async (address) => {
 };
 
 export const createAlert = async (walletAddress, type, threshold) => {
-  const res = await axios.post(`${BASE}/alerts`, { walletAddress, type, threshold });
+  const res = await axios.post(`${BASE}/alerts`, {
+    walletAddress,
+    type,
+    threshold,
+  });
   return res.data;
 };

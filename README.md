@@ -3,6 +3,12 @@
 > **Lumi** is an **AI-powered Web3 assistant** built on **BlockDAG**, designed to make decentralized finance fast, intuitive, and conversational.  
 > Instead of navigating multiple wallet apps or explorers, users can simply talk to Lumi — a personal AI that understands and executes crypto commands in real time.
 
+## 🌐 Live Demo
+
+🚀 Experience the live, deployed version of Lumi here: [https://lumi-blockdag-assistant.vercel.app/](https://lumi-blockdag-assistant.vercel.app/ "Try Lumi live!")
+
+---
+
 ---
 
 ## 🚀 Overview
